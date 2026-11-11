@@ -1,0 +1,17 @@
+{
+  "name": "factory-map",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Mapa interativo de planta de fábrica (React + Node + SQLite, 100% offline)",
+  "workspaces": ["server", "client"],
+  "scripts": {
+    "dev": "concurrently -n api,web -c blue,magenta \"npm run dev -w server\" \"npm run dev -w client\"",
+    "build": "npm run build -w client",
+    "start": "npm run start -w server",
+    "seed": "npm run seed -w server"
+  },
+  "devDependencies": {
+    "concurrently": "^9.0.0"
+  },
+  "engines": { "node": ">=18" }
+}
